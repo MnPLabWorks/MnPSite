@@ -30,25 +30,23 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg transition-all duration-300"
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="px-6 py-4">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection('home')}
             className="flex items-center gap-3 group"
           >
             <img
-              src="/ee834707-90a1-4ae0-8cdc-52e40ad5d013.png"
-              alt="M&P Labs"
+              src="/Company Logo.png"
+              alt="MPCodeLabs"
               className="h-12 w-auto"
             />
             <span className={`text-xl font-bold transition-colors ${
               isScrolled ? 'text-slate-800' : 'text-slate-800'
             }`}>
-              M&P Labs
+              MPCodeLabs
             </span>
           </button>
 
@@ -57,9 +55,7 @@ export default function Navigation() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className={`font-semibold transition-colors hover:text-blue-600 ${
-                  isScrolled ? 'text-slate-700' : 'text-slate-700'
-                }`}
+                className="font-semibold text-slate-700 hover:text-blue-600 transition-colors"
               >
                 {link.name}
               </button>
@@ -70,11 +66,11 @@ export default function Navigation() {
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? (
-              <X className={isScrolled ? 'text-slate-800' : 'text-slate-800'} />
-            ) : (
-              <Menu className={isScrolled ? 'text-slate-800' : 'text-slate-800'} />
-            )}
+              {isMobileMenuOpen ? (
+                <X className="text-slate-800" />
+              ) : (
+                <Menu className="text-slate-800" />
+              )}
           </button>
         </div>
 

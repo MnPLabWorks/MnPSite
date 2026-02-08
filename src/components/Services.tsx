@@ -47,7 +47,7 @@ export default function Services() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.filter(service => !['Cloud Solutions', 'Database Design', 'Security & Compliance'].includes(service.title)).map((service, index) => (
             <div
               key={index}
               className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"

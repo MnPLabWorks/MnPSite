@@ -6,17 +6,17 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto px-6 py-20 text-center">
+    <section className="min-h-screen flex items-center justify-center bg-white">
+      <div className="px-6 py-20 text-center">
         <div className="mb-8 flex justify-center">
           <img
-            src="/ee834707-90a1-4ae0-8cdc-52e40ad5d013.png"
-            alt="M&P Labs Logo"
+            src="/Company Logo.png"
+            alt="MPCodeLabs Logo"
             className="h-48 w-auto"
           />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold text-slate-800 mb-6">
-          Welcome to M&P Labs
+          Welcome to MPCodeLabs
         </h1>
         <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto">
           Think. Code. Deliver.

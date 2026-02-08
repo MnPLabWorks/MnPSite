@@ -1,5 +1,7 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 
+declare const Deno: any;
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
@@ -57,7 +59,7 @@ Deno.serve(async (req: Request) => {
     }
 
     const emailBody = `
-New Contact Form Submission from M&P Labs Website
+New Contact Form Submission from MPCodeLabs Website
 
 Name: ${name}
 Email: ${email}
@@ -67,7 +69,7 @@ Message:
 ${message}
 
 ---
-This email was sent from the M&P Labs contact form.
+This email was sent from the MPCodeLabs contact form.
     `.trim();
 
     const emailResponse = await fetch("https://api.resend.com/emails", {
@@ -77,7 +79,7 @@ This email was sent from the M&P Labs contact form.
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "M&P Labs <onboarding@resend.dev>",
+        from: "MPCodeLabs <onboarding@resend.dev>",
         to: ["mplabworks@gmail.com"],
         reply_to: email,
         subject: `New Contact Form Submission from ${name}`,

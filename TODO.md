@@ -1,0 +1,2 @@
+- [x] Hide 'Cloud Solutions', 'Database Design', and 'Security & Compliance' services in Services.tsx by filtering them out in the render
+- [x] Expand the white bar behind the logo to full page width in Navigation.tsx by making background always white and adjusting padding
